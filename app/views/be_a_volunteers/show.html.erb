@@ -1,0 +1,38 @@
+
+
+
+<div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">
+        <%= @be_a_volunteer.Name %><br>
+        <%= @be_a_volunteer.Role %>, Recruited in <%= @be_a_volunteer.Recruitment_Year %> 
+        <br>
+        <%= @be_a_volunteer.Roll_Number %> | <%= @be_a_volunteer.Branch %>
+
+        </h5>
+
+        <p class="card-text">
+        Projects - <%= @be_a_volunteer.Projects %><br>
+        Skill Sets - 
+        <%= @be_a_volunteer.Skill_Set %>
+        <br>
+        <br>
+
+        Remarks - <%= @be_a_volunteer.Remarks %>
+       
+
+         </p>
+        <p class="card-text"><small class="text-muted"> Status -  <%= @be_a_volunteer.Status %> | Contact number - <%= @be_a_volunteer.Contact_Number %> </small></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%= link_to 'Edit', edit_be_a_volunteer_path(@be_a_volunteer), class:"btn btn-dark" %> |
+<%= link_to 'Back', be_a_volunteers_path, class:"btn btn-secondary" %>

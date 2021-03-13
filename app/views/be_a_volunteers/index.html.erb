@@ -1,0 +1,45 @@
+
+
+<br><br>
+
+<table class="table table-hover table-bordered">
+  <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Roll number</th>
+      <th>Branch</th>
+      <th>Contact number</th>
+      <th>Recruitment year</th>
+      <th>Status</th>
+      <th>Projects</th>
+      <th>Role</th>
+      <th>Skill set</th>
+      <th>Remarks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @be_a_volunteers.each do |be_a_volunteer| %>
+      <tr>
+        <td><%= be_a_volunteer.Name %></td>
+        <td><%= be_a_volunteer.Roll_Number %></td>
+        <td><%= be_a_volunteer.Branch %></td>
+        <td><%= be_a_volunteer.Contact_Number %></td>
+        <td><%= be_a_volunteer.Recruitment_Year %></td>
+        <td><%= be_a_volunteer.Status %></td>
+        <td><%= be_a_volunteer.Projects %></td>
+        <td><%= be_a_volunteer.Role %></td>
+        <td><%= be_a_volunteer.Skill_Set %></td>
+        <td><%= be_a_volunteer.Remarks %></td>
+        <td><%= link_to 'Show Account', be_a_volunteer %></td>
+        <td><%= link_to 'Edit Account', edit_be_a_volunteer_path(be_a_volunteer) %></td>
+        <td><%= link_to 'Delete Account', be_a_volunteer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Create an account', new_be_a_volunteer_path, class:"btn btn-dark" %>

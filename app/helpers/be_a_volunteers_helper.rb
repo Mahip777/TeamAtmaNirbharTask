@@ -1,0 +1,2 @@
+module BeAVolunteersHelper
+end

@@ -1,0 +1,66 @@
+<%= form_with(model: be_a_volunteer) do |form| %>
+  <% if be_a_volunteer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(be_a_volunteer.errors.count, "error") %> prohibited this be_a_volunteer from being saved:</h2>
+
+      <ul>
+        <% be_a_volunteer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.text_field :Name, class:"form-control", placeholder: "Name" %>
+  </div>
+
+  <div class="field">
+    
+    <%= form.text_field :Roll_Number, class:"form-control", placeholder: "Bits ID" %>
+  </div>
+
+  <div class="field">
+    
+    <%= form.text_field :Branch, class:"form-control", placeholder: "Branch" %>
+  </div>
+
+  <div class="field">
+    
+    <%= form.text_field :Contact_Number, class:"form-control", placeholder: "Contact Number" %>
+  </div>
+
+  <div class="field">
+    
+    <%= form.text_field :Recruitment_Year, class:"form-control", placeholder: "Recruitment year" %>
+  </div>
+
+  <div class="field">
+    
+    <%= form.text_field :Status, class:"form-control", placeholder: "Status" %>
+  </div>
+
+  <div class="field">
+    
+    <%= form.text_field :Projects, class:"form-control", placeholder: "Projects" %>
+  </div>
+
+  <div class="field">
+    
+    <%= form.text_field :Role, class:"form-control", placeholder: "Role" %>
+  </div>
+
+  <div class="field">
+   
+    <%= form.text_field :Skill_Set, class:"form-control", placeholder: "Skill Sets" %>
+  </div>
+
+  <div class="field">
+    
+    <%= form.text_field :Remarks, class:"form-control", placeholder: "Remarks" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Update my account", class:"btn btn-secondary" %>
+  </div>
+<% end %>

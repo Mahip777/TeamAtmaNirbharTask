@@ -1,0 +1,157 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: url('/assets/purple.png');">
+  <div class="container-fluid">
+    <img src="/assets/logoparc.png" alt="" width="30" height="24" class="d-inline-block align-top" style="
+    width: 18rem;
+    height: 4rem;">
+    
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;&nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;&nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;&nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;&nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;&nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;&nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    &nbsp;
+    
+    
+    
+    <%= link_to 'Home', root_path, class:"navbar-brand text-white fs-5" %>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        
+        
+        
+
+        <% if user_signed_in? %>
+          <li class="nav-item text-white">
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class:"nav-link active text-white fs-5" %>
+          </li>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          
+          <li class="nav-item text-white">
+          <%= link_to 'Volunteers details',  be_a_volunteers_path, class:"nav-link active text-white fs-5" %>
+          </li>
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          
+
+          <li class="nav-item text-white">
+          <%= link_to 'Settings',  edit_user_registration_path, class:"nav-link active text-white fs-5" %>
+          </li>
+
+          
+         
+          
+        <% else %>  
+          <li class="nav-item text-white">
+          <%= link_to 'Login In',  new_user_session_path, class:"nav-link active text-white fs-5" %>
+          </li> 
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          
+
+          <li class="nav-item text-white">
+          <%= link_to 'Sign up',  new_user_registration_path, class:"nav-link active text-white fs-5" %>
+          </li> 
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          
+
+          <li class="nav-item">
+          <%= link_to 'Be a Volunteer!',   new_be_a_volunteer_path, class:"nav-link active text-white fs-5" %>
+          </li>
+
+          
+        <% end %>  
+          &nbsp;
+          &nbsp;
+          &nbsp;
+          
+        
+
+       
+        <li class="nav-item dropdown text-white">
+          <a class="nav-link dropdown-toggle fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="
+          color: white;">
+            Language
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Hindi</a></li>
+            <li><a class="dropdown-item" href="#">English</a></li>
+          </ul>
+        </li>
+      </ul>
+    
+    </div>
+  </div>
+</nav>
+
